@@ -1120,7 +1120,7 @@ const blocks = [
   },
   {
     name: 'getBrowser',
-    template: '브라우저 이름',
+    template: '유저 에이전트 (브라우저 이름)',
     skeleton: 'basic_string_field',
     color: {
       default: '#007bff',
