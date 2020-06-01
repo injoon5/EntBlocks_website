@@ -1,0 +1,286 @@
+*:not(code) {
+  font-family: "Metropolis", "Spoqa Han Sans";
+}
+
+*::selection {
+  background-color: #fbbc0570;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+div.container {
+  width: 50vw;
+  margin: 1rem auto;
+}
+
+div.container main {
+  padding: 3rem;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+}
+
+div.container section {
+  padding: 1rem 3rem;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+}
+
+div.container section ol, div.container section ul {
+  padding-left: 0;
+}
+
+div.container section img {
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 1rem;
+}
+
+@media (max-width: 1300px) {
+  div.container {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 700px) {
+  div.container main {
+    padding: 3rem 2rem !important;
+  }
+  div.container section {
+    padding: 1rem 2rem !important;
+  }
+}
+
+main.more h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+main.more h1 span.wrap {
+  white-space: nowrap;
+}
+
+main.more h1 span.important,
+main.more h1 span.important1 {
+  position: relative;
+  z-index: 1;
+}
+
+main.more h1 span.important::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+  position: absolute;
+  bottom: 2px;
+  left: 1px;
+  background-color: #34a853 !important;
+  z-index: -1;
+}
+
+main.more h1 span.important1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+  position: absolute;
+  bottom: 2px;
+  left: 1px;
+  background-color: #fbbc05 !important;
+  z-index: -1;
+}
+
+main.more h1 a {
+  color: black;
+}
+
+main.more a.button {
+  height: 1rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  background-color: #007bff;
+  padding: 0.7rem 1rem;
+  border-radius: 99rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 2.5rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  line-height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.3rem;
+}
+
+svg {
+  height: 1rem;
+  fill: #007bff;
+  margin-right: 0.3rem;
+}
+
+.code {
+  font-family: "Roboto Mono";
+  word-break: break-all;
+}
+
+.logo {
+  background-image: url(https://raw.githack.com/thoratica/EntBlocks/master/other.svg);
+  height: 3rem;
+  width: 3rem;
+}
+
+.category {
+  background-image: url(https://raw.githack.com/thoratica/EntBlocks/master/other.svg);
+  background-repeat: no-repeat;
+  margin-bottom: 1px;
+  background-size: 15px;
+  position: relative;
+  background-color: #ecf8ff;
+  z-index: 5;
+  background-position: 50% 4px;
+  cursor: pointer;
+  line-height: 14px;
+  font-size: 12px;
+  color: #595959;
+  border: 1px solid #d6e9f4;
+  padding: 22px 0 4px;
+  width: 40px;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  font-family: "NanumGothic" !important;
+  display: inline-flex;
+  justify-content: center;
+  user-select: none;
+  border-radius: .5rem;
+}
+
+.category::marker {
+  text-align: center;
+  font-size: 12px;
+  color: #595959;
+  cursor: pointer;
+  line-height: 14px;
+  font-weight: 700;
+}
+
+.category.selected {
+  background-image: url(https://raw.githack.com/thoratica/EntBlocks/master/other_selected.svg);
+  background-color: #007bff;
+  border-color: #006ce0;
+  color: #fff;
+}
+
+div.block {
+  background-image: url(/img/block.png);
+  height: calc(68px / 2);
+  width: calc(636px / 2);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-flex;
+  cursor: grab;
+}
+
+div.liwrap {
+  display: flex;
+  flex-direction: column;
+}
+
+div.play {
+  background-image: url(/img/play.png);
+  height: 2rem;
+  width: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+div#snack {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  bottom: 30px;
+}
+
+div#snack.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+footer {
+  flex-direction: column;
+  line-height: 2rem;
+  height: max-content;
+  width: calc(100vw - 2px);
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  border-radius: 2rem 2rem 0 0;
+  border: 1px solid #eee;
+}
+
+.github {
+  border-radius: 9999rem;
+  background-image: url(/img/github.png);
+  background-size: contain;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.source {
+  margin: 1rem;
+}
