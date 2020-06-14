@@ -701,7 +701,7 @@ Entry.addEventListener('addBlock', () => {
     'div.extend_block__a65d5 ul.list__a65d5 .addedItem'
   )) {
     if (i.classList.contains('on__a65d5')) {
-      fetch(document.querySelector('div.extend_block__a65d5 ul.list__a65d5 .addedItem .link__a65d5 .inner_box__a65d5 span').innerHTML)
+      fetch(i.querySelector('div.extend_block__a65d5 ul.list__a65d5 .addedItem .link__a65d5 .inner_box__a65d5 span').innerHTML)
         .then(res => {
           return res.text()
         })
@@ -716,11 +716,11 @@ addItem(
   '웹',
   'HTTP 요청, 웹 페이지 열기 등의 웹과 관련된 기능들을 제공합니다. [통합블록 제공]',
   'https://raw.githubusercontent.com/EntryBlockers/blocks/master/category/web.png',
-  `await (await fetch('https://raw.githubusercontent.com/EntryBlockers/blocks/master/web.js')).text()`
+  'https://raw.githubusercontent.com/EntryBlockers/blocks/master/web.js'
 )
 addItem(
   '데이터',
   'JSON, 배열 등의 데이터와 관련된 기능들을 제공합니다. [통합블록 제공]',
   'https://raw.githubusercontent.com/EntryBlockers/blocks/master/category/data.png',
-  `await (await fetch('https://raw.githubusercontent.com/EntryBlockers/blocks/master/data.js')).text()`
+  'https://raw.githubusercontent.com/EntryBlockers/blocks/master/data.js'
 )
